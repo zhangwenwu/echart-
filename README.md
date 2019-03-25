@@ -1,21 +1,8 @@
 # Echart大屏展示
 
+## index页面需要加上你自己的高德地图的密钥
 
+### 效果如下
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+![Alt text](/an/img/Daphne.png)
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
