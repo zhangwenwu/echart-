@@ -1,0 +1,119 @@
+body{
+	background: #00013a;
+}
+.head_img{
+	width: 100%;
+}
+.head{
+	margin-bottom: -5%;
+}
+.info {
+    background: #363F49;
+    color: #A0A7B4;
+    padding: 10px;
+    max-width: 300px;
+    min-width: 200px;
+    font-size: 12px;
+}
+.user_all{
+	width: 100%;
+    height: 80px;
+}
+
+.info tr .content {
+    text-align: right;
+    color: #D3D8E0;
+    max-width: 200px;
+}
+.content{
+	width: 98%;
+	padding:0 1%;
+}
+.con_left{
+	float: left;
+	width: 25%;
+}
+.con_cont{
+	float: left;
+	width: 50%;
+    padding: 0 1%;
+    padding-bottom: 4%;
+}
+.con_cont .user_all li{
+	float: left;
+	width: 23%;
+	height: 80px;
+	border:1px solid #45adf7;
+	margin-right: 2%;
+	text-align: center;
+	border-radius: 0 12px 0px 12px;
+}
+.con_cont .user_all li span{
+	font-size: 16px;
+	color: #fff006;
+	display: block;
+	margin-top: 4%;
+}
+.con_cont .user_all li b{
+	font-size: 30px;
+	color: #fff;
+}
+.con_right{
+	float: left;
+	width: 25%;
+}
+.user_age.grid{
+	width: 100%;
+	height: 200px;
+	background: url(../img/border.png) no-repeat;
+	background-size:100% 100%;
+	padding: 0 5%;
+	margin-bottom: 10px;
+}
+.grid_top{
+	display: inline-block;
+	width: 100%;
+    text-align: center;
+    color: #fff;
+  	margin-top: 3%;
+    margin-bottom: -3%;
+}
+.health{
+	float: left;
+	width: 33%;
+}
+.top{
+    width: 100%;
+    float: left;
+}
+.bottoms{
+	float: left;
+	margin-top: 3%;
+	width: 100%;
+}
+.bottoms .bot{
+	width: 24%;
+	float: left;
+	margin-right: 1%;
+}
+
+.bottoms .grid{
+	position: relative;
+}
+
+.grid_right{
+    position: absolute;
+    right: 4%;
+    border: 1px solid #24cef9;
+    top: 3%;
+    color: #fff;
+    font-size: 12px;
+	padding:2%;
+	background: #031954
+}
+
+.grid_right li{
+	list-style: none;
+	text-align: center;
+	margin-bottom: 2px;
+}

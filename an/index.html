@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>安+健康中心数据监控系统</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='js/echarts.js'></script>
+	<script type="text/javascript" src='js/index.js'></script>
+	<script type="text/javascript" src='js/map.js'></script>
+</head>
+<body>
+	<div class='content'>
+		<div class='head'>
+			<img src="img/head.png" class='head_img'>
+		</div>
+		<div class='top'>
+		<div class='con_left grid'>
+				<div class='user_age grid'>
+					<div class='grid_top'>用户年龄分布</div>
+					<div id='user_age' style="height: 100%"></div>
+				 </div>
+				 <div class='user_age grid'>
+					<div class='grid_top'>运动步数</div>
+					<div id='walking' style="height: 100%"></div>
+				 </div>
+				 <div class='user_age grid'>
+					<div class='grid_top'>用户性别比例</div>
+					<div id='gender' style="height: 100%"></div>
+				 </div>
+		</div>
+		<div class='con_cont'>
+			<ul class='user_all'>
+				<li>	
+					<span>用户总量</span>
+					<b>65,679</b>
+				</li>
+				<li>	
+					<span>今日新增</span>
+					<b>65,679</b>
+				</li>
+				<li>	
+					<span>服务总量</span>
+					<b>65,679</b>
+				</li>
+				<li>	
+					<span>服务新增</span>
+					<b>65,679</b>
+				</li>
+			</ul>
+			<div id='cityMap' style="height: 100%;width: 100%"></div>
+		</div>
+		<div class='con_right grid'>
+				<div class='user_age grid'>
+					<div class='grid_top'>VIP人数增涨统计</div>
+					<div id='vip_up' style="height: 100%"></div>
+				 </div>
+				 <div class='user_age grid'>
+					<div class='grid_top'>SOS救助统计</div>
+					<div id='sos' style="height: 100%"></div>
+				 </div>
+				 <div class='user_age grid'>
+					<div class='grid_top'>健康情况</div>
+					<div class='health' id='health1' style="height: 100%"></div>
+					<div class='health' id='health2' style="height: 100%"></div>
+					<div class='health' id='health3' style="height: 100%"></div>
+				 </div>
+		</div>
+		</div>
+		<div class="bottoms">
+			<div class='bot'>
+				<div class='user_age grid '>
+					<div class='grid_top'>心率统计</div>
+					<ul class='grid_right'>
+						<li>正常:<span>2000</span>人</li>
+						<li>过速:<span>2000</span>人</li>
+						<li>过缓:<span>2000</span>人</li>
+						<li>不齐:<span>2012300</span>人</li>
+					</ul>
+					<div id='heart' style="height: 100%"></div>
+				 </div>
+			</div>
+			<div class='bot'>
+				<div class='user_age grid '>
+					<div class='grid_top'>血压统计</div>
+					<ul class='grid_right'>
+						<li>正常:<span>2000</span>人</li>
+						<li>I级:<span>2000</span>人</li>
+						<li>II级:<span>2000</span>人</li>
+						<li>III级:<span>2012300</span>人</li>
+						<li>低血压:<span>2012300</span>人</li>
+					</ul>
+					<div id='pressure' style="height: 100%"></div>
+				 </div>
+			</div>
+			<div class='bot'>
+				<div class='user_age grid '>
+					<div class='grid_top'>血氧统计</div>
+					<ul class='grid_right'>
+						<li>正常:<span>2000</span>人</li>
+						<li>低血氧:<span>2000</span>人</li>
+					</ul>
+					<div id='oxygen' style="height: 100%"></div>
+				 </div>
+			</div>
+			<div class='bot'>
+				<div class='user_age grid '>
+					<div class='grid_top'>心电统计</div>
+					<ul class='grid_right'>
+						<li>正常:<span>2000</span>人</li>
+						<li>异常:<span>2000</span>人</li>
+					</ul>
+					<div id='ecg' style="height: 100%"></div>
+				 </div>
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+<script src="https://webapi.amap.com/loca?v=1.2.0&key=4b0e3bbb1a8b6cb6f4f19184f202f2c4"></script>
+
+<script type="text/javascript">
+$(function() {
+	
+	$(".grid").css('height',$(".grid").width());
+	$(".grid").css('height',$(".grid").width());
+	$(".con_cont").css('height',$(".grid").width()*3);
+	user_age()
+	vip_up()
+	cityMap()
+	walking()
+	gender()
+	sos()
+	health()
+	heart()
+	pressure()
+	oxygen()
+	ecg()
+});
+</script>
+</html>
